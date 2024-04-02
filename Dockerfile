@@ -2,6 +2,7 @@ FROM pandoc/latex
 
 # Installs latest Chromium (100) package.
 RUN apk add --no-cache \
+    git \
     chromium \
     nss \
     freetype \
