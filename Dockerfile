@@ -13,7 +13,7 @@ RUN apk add --no-cache \
     nodejs \
     npm
 
-RUN npm install --global mermaid-filter pandoc-plantuml
+RUN npm install --global mermaid-filter@latest pandoc-plantuml
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
