@@ -1,8 +1,9 @@
-FROM pandoc/latex
+FROM pandoc/extra
 
 # Installs latest Chromium (100) package.
 RUN apk add --no-cache \
     git \
+    bash \
     chromium \
     nss \
     freetype \
