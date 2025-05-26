@@ -1,4 +1,4 @@
-FROM pandoc/extra
+FROM pandoc/latex
 
 # Installs latest Chromium (100) package.
 RUN apk add --no-cache \
