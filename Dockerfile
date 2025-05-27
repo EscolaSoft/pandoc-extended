@@ -25,7 +25,8 @@ RUN npm install puppeteer@13.5.0
 RUN mkdir -p /root/.pandoc/templates/ && \
     wget https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest/download/Eisvogel.tar.gz && \
     tar -xvzf Eisvogel.tar.gz && \
-    mv eisvogel.tex /root/.pandoc/templates/ && \
+    mv eisvogel.latex /root/.pandoc/templates/ && \
+    mv eisvogel.beamer /root/.pandoc/templates/ && \
     rm Eisvogel.tar.gz
 
 # Add user so we don't need --no-sandbox.
