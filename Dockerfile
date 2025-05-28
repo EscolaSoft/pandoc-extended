@@ -22,12 +22,8 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 RUN npm install puppeteer@13.5.0
 
 # Instalacja szablonu Eisvogel
-RUN mkdir -p /root/.pandoc/templates/ && \
-    wget https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest/download/Eisvogel.tar.gz && \
-    tar -xvzf Eisvogel.tar.gz && \
-    mv eisvogel.latex /root/.pandoc/templates/ && \
-    mv eisvogel.beamer /root/.pandoc/templates/ && \
-    rm Eisvogel.tar.gz
+RUN wget -O /usr/local/share/pandoc/templates/eisvogel.tex https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+
 
 # Add user so we don't need --no-sandbox.
 RUN addgroup -S pptruser && adduser -S -G pptruser pptruser \
